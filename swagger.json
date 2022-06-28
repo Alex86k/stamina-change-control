@@ -1,0 +1,119 @@
+{
+  "swagger": "2.0",
+  "info": {
+    "version": "1.0.0",
+    "title": "stamina change control"
+  },
+  "host": "localhost:3000",
+  "basePath": "/api",
+  "schemes": [
+    "http"
+  ],
+  "securityDefinitions": {},
+  "security": [],
+  "paths": {
+    "/stamina/getStaminaValue/{uid}": {
+      "get": {
+        "tags": [
+          "Stamina"
+        ],
+        "summary": "Get stamina value",
+        "description": "Get current stamina value for player",
+        "parameters":  [
+          {
+            "name": "uid",
+            "in": "path",
+            "schema": {
+              "type": "integer"
+            },
+            "required": true
+          }
+        ],
+        "consumes": [
+          "application/json"
+        ],
+        "produces": [
+          "application/json"
+        ],
+        "responses": {
+          "200": {
+            "description": "Player stamina value return"
+          },
+          "500": {
+            "description": "Something went wrong"
+          }
+        },
+        "security": []
+      }
+    },
+    "/stamina/decreasingStaminaValue/{uid}": {
+      "put": {
+        "tags": [
+          "Stamina"
+        ],
+        "summary": "Decreasing stamina",
+        "description": "Decreasing player stamina",
+        "parameters":  [
+          {
+            "name": "uid",
+            "in": "path",
+            "schema": {
+              "type": "integer"
+            },
+            "required": true
+          }
+        ],
+        "consumes": [
+          "application/json"
+        ],
+        "produces": [
+          "application/json"
+        ],
+        "responses": {
+          "200": {
+            "description": "Player stamina value return"
+          },
+          "500": {
+            "description": "Something went wrong"
+          }
+        },
+        "security": []
+      }
+    },
+    "/stamina/recoveryStaminaValue/{uid}": {
+      "put": {
+        "tags": [
+          "Stamina"
+        ],
+        "summary": "Stamina recovery",
+        "description": "Player stamina recovery",
+        "parameters":  [
+          {
+            "name": "uid",
+            "in": "path",
+            "schema": {
+              "type": "integer"
+            },
+            "required": true
+          }
+        ],
+        "consumes": [
+          "application/json"
+        ],
+        "produces": [
+          "application/json"
+        ],
+        "responses": {
+          "200": {
+            "description": "Player stamina value return"
+          },
+          "500": {
+            "description": "Something went wrong"
+          }
+        },
+        "security": []
+      }
+    }
+  }
+
+}
